@@ -17,10 +17,10 @@ let db;
 export async function connectToDb() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    db = client.db("gym");
+    // await client.db("admin").command({ ping: 1 });
+    db = client.db("EduVerse");
     console.log(
       "Alhamdulillah, MongoDB is connected  and the server is running!",
     );

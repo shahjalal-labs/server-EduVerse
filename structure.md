@@ -10,15 +10,25 @@
 │   │   │   ├── globalError.js
 │   │   │   ├── notFound.js
 │   │   │   └── validateRequest.js
-│   │   └── modules
-│   │       └── schedule
-│   │           ├── scheduleApi.hurl
-│   │           ├── schedule.controller.js
-│   │           ├── schedule.route.js
-│   │           ├── schedule.service.js
-│   │           └── schedule.validation.js
+│   │   ├── modules
+│   │   │   ├── assignments
+│   │   │   │   ├── assignments.cocntrollers.js
+│   │   │   │   ├── assignments.model.js
+│   │   │   │   ├── assignments.route.js
+│   │   │   │   ├── assignments.service.js
+│   │   │   │   └── assignments.validation.js
+│   │   │   └── schedule
+│   │   │       ├── scheduleApi.hurl
+│   │   │       ├── schedule.controller.js
+│   │   │       ├── schedule.route.js
+│   │   │       ├── schedule.service.js
+│   │   │       └── schedule.validation.js
+│   │   └── utils
+│   │       ├── sendResponse.js
+│   │       └── validateRequest.js
 │   ├── app.js
 │   └── server.js
-└── structure.md
+├── structure.md
+└── vercel.json
 
-7 directories, 15 files
+9 directories, 23 files
