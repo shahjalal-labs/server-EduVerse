@@ -5,7 +5,13 @@ const validateRequest = (schema) => {
       next();
     } catch (error) {
       const errors = error.details.map((detail) => detail.message);
-      res.status(400).json({ success: false, errors });
+      res
+        .status(400)
+        .json({
+          success: false,
+          errorFrom: "Joi validateRequest.js 8",
+          errors,
+        });
     }
   };
 };

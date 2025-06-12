@@ -1,3 +1,4 @@
 node_modules
 .env
 .vercel
+src/App/modules/assignments/assignmentsApi.hurl

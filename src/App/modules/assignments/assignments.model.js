@@ -31,15 +31,9 @@ const assignmentSchema = new mongoose.Schema(
       type: Date,
       required: [true, "Due date is required"],
     },
-    createdBy: {
-      email: {
-        type: String,
-        required: true,
-      },
-      name: {
-        type: String,
-        required: true,
-      },
+    creatorEmail: {
+      type: String,
+      required: true,
     },
   },
   {

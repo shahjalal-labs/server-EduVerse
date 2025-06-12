@@ -1,9 +1,13 @@
-import { verifyToken } from "../utils/jwt.utils.js";
+import { verifyToken } from "./jwt.js";
 
 export const authenticateUser = (req, res, next) => {
-  const token = req.cookies.token;
+  const token = req?.cookies?.token;
   if (!token) {
-    return res.status(401).json({ message: "Unauthorized: No token" });
+    return res.status(401).json({
+      statusCode: 401,
+      success: false,
+      message: "Unauthorized: No token",
+    });
   }
 
   try {
@@ -11,7 +15,6 @@ export const authenticateUser = (req, res, next) => {
     req.decoded = decoded; // attach user info to request
     next();
   } catch (err) {
-    // next(err);
-    return res.status(401).json({ message: "Unauthorized: Invalid token" });
+    next(err);
   }
 };

@@ -1,3 +1,8 @@
+GET  http://localhost:5000/api/v1/assignments
+
+
+
+
 GET  http://localhost:5000
 
 
@@ -5,35 +10,44 @@ GET  http://localhost:5000/not-found
 
 
 
-GET  http://localhost:5000/api/v1/schedules
 
 
 
-GET  http://localhost:5000/api/v1/coffee/68248f451784c5e7958817ff
-
-
-DELETE http://localhost:5000/api/v1/coffee/68248f451784c5e7958817fc
+GET  http://localhost:5000/api/v1/assignments/684a56a999f83617489ebb2c
 
 
 
-PATCH  http://localhost:5000/api/v1/coffee/68248f451784c5e7958817ff
+
+DELETE http://localhost:5000/api/v1/assignments/delete-assignment/684a4b09b1de13c0699641df
+
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlYWNoZXJAZWR1dmVyc2UuY29tIiwiaWF0IjoxNzQ5NzA3NTA3LCJleHAiOjE3NDk3OTM5MDd9.N8kxW_5idPgvLB_6nzkemFrcdN-xRkLNiSPIILKJSqs
+
+
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+
+
+
+PATCH  http://localhost:5000/api/v1/update-assignment/684a56a999f83617489ebb2c
 Content-Type: application/json
 {
-    "name": "testingg"
+    "thumbnailUrl": "https://i.ibb.co.com/PZ3DWGJk/developerpuzzles.png"
 }
 
 
-POST http://localhost:5000/api/v1/create-coffee
+POST http://localhost:5000/api/v1/create-assignment
 Content-Type: application/json
 {
-    "name": "testingg",
-    "description": "testingg",
-    "price": 3.50,
-    "size": "Single",
-    "ingredients": ["Espresso Beans", "Water"],
-    "available": true,
-    "image": "https://example.com/images/espresso.jpg"
+    "title": "Build a Blog Platform with Node.js",
+    "description": "Create a complete blog application using Node.js, Express, and MongoDB that supports posts, comments, and user authentication.",
+    "marks": 100,
+    "thumbnailUrl": "https://i.ibb.co.com/PZ3DWGJk/developerpuzzles.png",
+    "difficulty": "medium",
+    "dueDate": "2025-07-01T00:00:00.000Z",
+    "creatorEmail": "teacher@eduverse.com"
 }
+
 
 
 POST  http://localhost:5000/api/v1/create-schedules
