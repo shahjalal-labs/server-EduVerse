@@ -19,11 +19,7 @@ GET  http://localhost:5000/api/v1/assignments/684a56a999f83617489ebb2c
 
 
 DELETE http://localhost:5000/api/v1/assignments/delete-assignment/684a4b09b1de13c0699641df
-
-Cookie: token=token
-
-
-
+Cookie: token="add-your-token-here"
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 
 
