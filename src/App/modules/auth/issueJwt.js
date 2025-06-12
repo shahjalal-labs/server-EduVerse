@@ -3,8 +3,9 @@ import { generateToken } from "./jwt.js";
 export const createJwtToken = async (req, res) => {
   // after validating user credentials
   const userPayload = { email: req.body.email };
+  console.log(userPayload, "issueJwt.js", 6);
   const token = generateToken(userPayload);
-  console.log(token, "issueJwt.js", 7);
+  console.log(token, "token: issueJwt.js", 7);
 
   res.cookie("token", token, {
     httpOnly: true,

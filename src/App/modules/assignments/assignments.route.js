@@ -2,13 +2,14 @@ import { AssignmentControllers } from "./assignments.controllers.js";
 import express from "express";
 import validateRequest from "../../utils/validateRequest.js";
 import { AssignmentsValidationSchema } from "./assignments.validation.js";
-import { authenticateUser } from "../auth/auth.middleware.js";
+import { verifyToken } from "../auth/jwt.js";
 
 const router = express.Router();
 
 // Create a new assignment
 router.post(
   "/create-assignment",
+  verifyToken,
   validateRequest(AssignmentsValidationSchema.createAssignmentSchema),
   AssignmentControllers.createAssignment,
 );
@@ -20,6 +21,7 @@ router.get("/", AssignmentControllers.getAllAssignments);
 router.get("/:id", AssignmentControllers.getSingleAssignment);
 router.patch(
   "/update-assignment/:id",
+  verifyToken,
   validateRequest(AssignmentsValidationSchema.updateAssignmentSchema),
   AssignmentControllers.updateAssignment,
 );
@@ -27,7 +29,7 @@ router.patch(
 // Delete an assignment by ID
 router.delete(
   "/delete-assignment/:id",
-  authenticateUser,
+  verifyToken,
   AssignmentControllers.deleteAssignment,
 );
 

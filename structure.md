@@ -12,17 +12,19 @@
 │   │   │   └── validateRequest.js
 │   │   ├── modules
 │   │   │   ├── assignments
-│   │   │   │   ├── assignments.cocntrollers.js
+│   │   │   │   ├── assignmentsApi.hur
+│   │   │   │   ├── assignmentsApi.hurl
+│   │   │   │   ├── assignments.controllers.js
 │   │   │   │   ├── assignments.model.js
 │   │   │   │   ├── assignments.route.js
 │   │   │   │   ├── assignments.service.js
 │   │   │   │   └── assignments.validation.js
-│   │   │   └── schedule
-│   │   │       ├── scheduleApi.hurl
-│   │   │       ├── schedule.controller.js
-│   │   │       ├── schedule.route.js
-│   │   │       ├── schedule.service.js
-│   │   │       └── schedule.validation.js
+│   │   │   └── auth
+│   │   │       ├── authApi.hurl
+│   │   │       ├── auth.middleware.js
+│   │   │       ├── auth.routes.js
+│   │   │       ├── issueJwt.js
+│   │   │       └── jwt.js
 │   │   └── utils
 │   │       ├── sendResponse.js
 │   │       └── validateRequest.js
@@ -31,4 +33,4 @@
 ├── structure.md
 └── vercel.json
 
-9 directories, 23 files
+9 directories, 25 files
