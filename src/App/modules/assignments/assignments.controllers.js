@@ -65,7 +65,10 @@ const updateAssignment = async (req, res, next) => {
 const deleteAssignment = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const result = await AssignmentServices.deleteAssignmentFromDB(id);
+
+    const { email } = req.body;
+    console.log(email, "assignments.controllers.js", 70);
+    const result = await AssignmentServices.deleteAssignmentFromDB(id, email);
     sendResponse(res, {
       statusCode: 200,
       success: true,

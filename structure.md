@@ -19,12 +19,20 @@
 │   │   │   │   ├── assignments.route.js
 │   │   │   │   ├── assignments.service.js
 │   │   │   │   └── assignments.validation.js
-│   │   │   └── auth
-│   │   │       ├── authApi.hurl
-│   │   │       ├── auth.middleware.js
-│   │   │       ├── auth.routes.js
-│   │   │       ├── issueJwt.js
-│   │   │       └── jwt.js
+│   │   │   ├── auth
+│   │   │   │   ├── authApi.hurl
+│   │   │   │   ├── auth.middleware.js
+│   │   │   │   ├── auth.routes.js
+│   │   │   │   ├── issueJwt.js
+│   │   │   │   └── jwt.js
+│   │   │   └── submission
+│   │   │       ├── submissionApi.hur
+│   │   │       ├── submissionApi.hurl
+│   │   │       ├── submission.controller.js
+│   │   │       ├── submission.model.js
+│   │   │       ├── submission.route.js
+│   │   │       ├── submission.service.js
+│   │   │       └── submission.validation.js
 │   │   └── utils
 │   │       ├── sendResponse.js
 │   │       └── validateRequest.js
@@ -33,4 +41,4 @@
 ├── structure.md
 └── vercel.json
 
-9 directories, 25 files
+10 directories, 32 files

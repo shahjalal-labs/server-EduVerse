@@ -25,10 +25,13 @@ const updateAssignmentIntoDB = async (id, updatedData) => {
 };
 
 // ✅ Delete Assignment (Only if creator matches)
-const deleteAssignmentFromDB = async (id) => {
+const deleteAssignmentFromDB = async (id, email) => {
   const assignment = await Assignment.findById(id);
   if (!assignment) {
     throw new Error("Assignment not found");
+  }
+  if (assignment?.creatorEmail !== email) {
+    throw new Error("Oops! Only the creator can delete this assignment.");
   }
 
   return await Assignment.findByIdAndDelete(id);
