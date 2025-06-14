@@ -2,12 +2,11 @@
 # Get submission by id
 GET {{url}}submission/signle/684c72dee4a02464616b4caa
 Cookie: token={{your_jwt_token}}
-,
+
 
 
 
 # Get my submissions (My assignments)
-http://localhost:5000/api/v1/submission/my-submissions?email=nidaa.al.imaan.official@gmail.com
 GET {{url}}submission/my-submissions?email=nidaa.al.imaan.official@gmail.com
 Cookie: token={{your_jwt_token}}
 

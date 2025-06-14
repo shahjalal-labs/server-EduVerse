@@ -1,4 +1,5 @@
 .
+├── bars.env.example
 ├── bun.lock
 ├── package.json
 ├── README.md
@@ -12,6 +13,7 @@
 │   │   │   └── validateRequest.js
 │   │   ├── modules
 │   │   │   ├── assignments
+│   │   │   │   ├── assignmentData.json
 │   │   │   │   ├── assignmentsApi.hur
 │   │   │   │   ├── assignmentsApi.hurl
 │   │   │   │   ├── assignments.controllers.js
@@ -41,4 +43,4 @@
 ├── structure.md
 └── vercel.json
 
-10 directories, 32 files
+10 directories, 34 files
